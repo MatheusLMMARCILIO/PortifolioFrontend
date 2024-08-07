@@ -6,7 +6,16 @@ ModoDark.addEventListener("click", () => {
     const Idioma = document.querySelector('.Idioma');
     const devFront = document.querySelector(".devFront");
     const description = document.querySelector(".description");
-const menuPart2 = document.querySelector('.menuPart2')
+    const menuPart2 = document.querySelector('.menuPart2')
+    const tags = document.querySelector(".tags")
+const aboutMeSection = document.querySelector(".aboutMeSection")
+const moreInformation = document.querySelector(".moreInformation")
+const textInformation = document.querySelector(".textInformation")
+const spanSkill = document.querySelector(".spanSkill")
+const html = document.querySelector('.html')
+const css = document.querySelector('.css')
+const JS = document.querySelector('.JS')
+const React = document.querySelector('.React')
 
 
     body.classList.toggle("dark");
@@ -15,4 +24,13 @@ const menuPart2 = document.querySelector('.menuPart2')
     devFront.classList.toggle("dark");
     description.classList.toggle("dark");
     menuPart2.classList.toggle("dark")
+    tags.classList.toggle("dark")
+    aboutMeSection.classList.toggle('dark')
+    moreInformation.classList.toggle('dark')
+    textInformation.classList.toggle('dark')
+    spanSkill.classList.toggle("dark")
+    html.classList.toggle("dark")
+    css.classList.toggle("dark")
+    JS.classList.toggle("dark")
+    React.classList.toggle("dark")
 });
