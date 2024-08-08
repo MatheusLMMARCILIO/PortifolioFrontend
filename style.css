@@ -2,7 +2,40 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
+
+body {
+    background: #f0f0f0; /* Cor de fundo clara para contraste com a luz roxa */
+}
+
+#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Fica atrás do conteúdo */
+    overflow: hidden; /* Garante que a luz não cause barras de rolagem */
+}
+
+#light {
+    position: absolute;
+    width: 100px; /* Tamanho da luz menor */
+    height: 100px; /* Tamanho da luz menor */
+    background: radial-gradient(circle, #054f99 0%, rgba(0, 0, 0, 0) 50%);
+    pointer-events: none; /* Faz com que o elemento não interfira com o clique do mouse */
+    border-radius: 50%;
+    transition: 0.1s; /* Suaviza a movimentação da luz */
+    z-index: 1; /* Garante que a luz fique acima do fundo, mas atrás do conteúdo */
+}
+
+.allPage {
+    position: relative; /* Garante que o conteúdo fique sobre o fundo */
+    z-index: 2; /* Garante que o conteúdo fique acima da luz e do fundo */
+}
+
+/*******************************/
 
 body.dark {
     background-color: rgba(0, 0, 0, 0.904);
@@ -200,7 +233,7 @@ li {
     height: 450px;
     max-width: 1050px;
     min-width: 50px;
-    background-color: #EEEEEE;
+    background-color: #eeeeee75;
 
 }
 

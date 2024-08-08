@@ -37,3 +37,12 @@ const img = document.querySelector(".img")
     myProjects.classList.toggle("dark")
     img.classList.toggle("dark")
 });
+
+document.addEventListener('mousemove', function(event) {
+    const light = document.getElementById('light');
+    const x = event.clientX;
+    const y = event.clientY;
+
+    light.style.left = `${x - 50}px`; 
+    light.style.top = `${y - 50}px`; 
+});
