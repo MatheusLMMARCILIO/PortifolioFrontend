@@ -16,7 +16,8 @@ const html = document.querySelector('.html')
 const css = document.querySelector('.css')
 const JS = document.querySelector('.JS')
 const React = document.querySelector('.React')
-
+const myProjects = document.querySelector('.myProjects')
+const img = document.querySelector(".img")
 
     body.classList.toggle("dark");
     link.classList.toggle("dark");
@@ -33,4 +34,6 @@ const React = document.querySelector('.React')
     css.classList.toggle("dark")
     JS.classList.toggle("dark")
     React.classList.toggle("dark")
+    myProjects.classList.toggle("dark")
+    img.classList.toggle("dark")
 });
