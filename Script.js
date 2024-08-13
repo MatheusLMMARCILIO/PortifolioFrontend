@@ -17,7 +17,11 @@ const css = document.querySelector('.css')
 const JS = document.querySelector('.JS')
 const React = document.querySelector('.React')
 const myProjects = document.querySelector('.myProjects')
-const img = document.querySelector(".img")
+const img = document.querySelector(".IMAGE")
+const contactTitle = document.querySelector(".contactTitle")
+const contactItem = document.querySelector('.contactItem')
+
+
 
     body.classList.toggle("dark");
     link.classList.toggle("dark");
@@ -36,6 +40,9 @@ const img = document.querySelector(".img")
     React.classList.toggle("dark")
     myProjects.classList.toggle("dark")
     img.classList.toggle("dark")
+contactTitle.classList.toggle('dark')
+contactItem.classList.toggle('dark')
+
 });
 
 document.addEventListener('mousemove', function(event) {

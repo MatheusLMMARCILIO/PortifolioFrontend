@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f0f0f0; /* Cor de fundo clara para contraste com a luz roxa */
+    background: #f0f0f0; 
 }
 
 #background {
@@ -398,7 +398,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0px;
+    margin: 50px 0;
 }
 
 .myProjects span {
@@ -414,13 +414,21 @@ li {
     color: white;
 }
 
-.instagram, .GerenciadorDeSenha, .Fastos {
-    width: 500px;
-    height: 300px;
+.blocoUm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.instagram, .GerenciadorDeSenha {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
+    margin: 20px;
 }
 
 .name span {
@@ -429,21 +437,90 @@ li {
     color: #0A67C2;
 }
 
-.img img {
+.IMAGE img {
+    width: 100%;
     max-width: 500px;
-    min-width: 100px;
+    height: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.img.dark img {
-box-shadow: #0A67C2 0px 22px 70px 4px;
+.IMAGE.dark img {
+    box-shadow: #0A67C2 0px 22px 70px 4px;
 }
 
 .projectsPart1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.iconss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+}
+
+.iconss i {
+    margin: 5px;
+}
+
+/********conato*****************/
+
+/* Seção de Contato */
+.contactSection {
+    padding: 50px 0;
+
+    text-align: center;
+}
+
+.contactTitle span {
+    font-size: 36px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactItem a {
+    text-decoration: none;
+    color: black;
+}
+
+.contactItem i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0A67C2;
+}
+
+.contactItem span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contactTitle.dark span {
+    color: white;
 }
 
 
@@ -517,6 +594,20 @@ box-shadow: #0A67C2 0px 22px 70px 4px;
         height: 820px;
     }
 
+.blocoUm {
+    display: flex;
+    flex-direction: column;
+}
+
+.IMAGE img  {
+    width: 300px;
+}
+
+.instagram, .GerenciadorDeSenha {
+    margin: 0;
+}
+
+
 }
 
 
@@ -577,5 +668,11 @@ box-shadow: #0A67C2 0px 22px 70px 4px;
     .myProjects span {
         font-size: 25px;
     }
+
+    .blocoUm {
+        display: flex;
+        flex-direction: column;
+    }
+    
 
 }
