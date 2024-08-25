@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f0f0f0; 
+    background: #f0f0f0;
 }
 
 #background {
@@ -15,24 +15,33 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 0; /* Fica atrás do conteúdo */
-    overflow: hidden; /* Garante que a luz não cause barras de rolagem */
+    z-index: 0;
+    /* Fica atrás do conteúdo */
+    overflow: hidden;
+    /* Garante que a luz não cause barras de rolagem */
 }
 
 #light {
     position: absolute;
-    width: 100px; /* Tamanho da luz menor */
-    height: 100px; /* Tamanho da luz menor */
+    width: 100px;
+    /* Tamanho da luz menor */
+    height: 100px;
+    /* Tamanho da luz menor */
     background: radial-gradient(circle, #054f99 0%, rgba(0, 0, 0, 0) 50%);
-    pointer-events: none; /* Faz com que o elemento não interfira com o clique do mouse */
+    pointer-events: none;
+    /* Faz com que o elemento não interfira com o clique do mouse */
     border-radius: 50%;
-    transition: 0.1s; /* Suaviza a movimentação da luz */
-    z-index: 1; /* Garante que a luz fique acima do fundo, mas atrás do conteúdo */
+    transition: 0.1s;
+    /* Suaviza a movimentação da luz */
+    z-index: 1;
+    /* Garante que a luz fique acima do fundo, mas atrás do conteúdo */
 }
 
 .allPage {
-    position: relative; /* Garante que o conteúdo fique sobre o fundo */
-    z-index: 2; /* Garante que o conteúdo fique acima da luz e do fundo */
+    position: relative;
+    /* Garante que o conteúdo fique sobre o fundo */
+    z-index: 2;
+    /* Garante que o conteúdo fique acima da luz e do fundo */
 }
 
 /*******************************/
@@ -294,9 +303,12 @@ li {
 /***********************Skill************************/
 
 .MySkill {
-    padding-top: 50px;
     width: 100%;
-    height: 650px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .spanSkill {
@@ -305,7 +317,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0px;
 }
 
 .spanSkill span {
@@ -322,7 +333,7 @@ li {
 }
 
 .informationText {
-    margin-top: 20px;
+    padding: 50px 0px;
 }
 
 .informationText span {
@@ -345,18 +356,15 @@ li {
 }
 
 .icons {
-    width: 100%;
-    height: 400px;
-    display: flex;
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-}
-
-.icons1 {
-    display: flex;
-
+    padding-top: 80px;
 }
 
 
@@ -364,6 +372,7 @@ li {
 .css,
 .JS,
 .React {
+
     margin: 20px;
 }
 
@@ -381,15 +390,18 @@ li {
     color: white;
 }
 
-.icons {
-    margin-top: 80px;
-}
+
+   
 
 /*****************prejects*************************/
 
 .prejects {
     width: 100%;
     height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .myProjects {
@@ -398,7 +410,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0;
+    margin: 50px 0px;
 }
 
 .myProjects span {
@@ -414,21 +426,17 @@ li {
     color: white;
 }
 
-.blocoUm {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.instagram, .GerenciadorDeSenha {
+.instagram,
+.GerenciadorDeSenha,
+.Calculadora {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 20px;
 }
 
 .name span {
@@ -437,19 +445,22 @@ li {
     color: #0A67C2;
 }
 
-.IMAGE img {
+.IMAGE img, .IMAGEImg img, .IMAGECal img {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 20px;
 }
 
-.IMAGE.dark img {
+.IMAGE.dark img, .IMAGEImg.dark img, .IMAGECal.dark img {
     box-shadow: #0A67C2 0px 22px 70px 4px;
 }
 
-.projectsPart1 {
-    display: flex;
+.projectsPart {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -555,14 +566,9 @@ li {
     }
 
     .icons {
-        height: 600px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .icons,
-    .icons1 {
-        display: flex;
-        flex-direction: column;
-    }
 
     .html span,
     .css span,
@@ -594,18 +600,19 @@ li {
         height: 820px;
     }
 
-.blocoUm {
-    display: flex;
-    flex-direction: column;
-}
+    .blocoUm {
+        display: flex;
+        flex-direction: column;
+    }
 
-.IMAGE img  {
-    width: 300px;
-}
+    .IMAGE img, .IMAGEImg img {
+        width: 300px;
+    }
 
-.instagram, .GerenciadorDeSenha {
-    margin: 0;
-}
+    .instagram,
+    .GerenciadorDeSenha {
+        margin: 0;
+    }
 
 
 }
@@ -673,6 +680,8 @@ li {
         display: flex;
         flex-direction: column;
     }
-    
 
+    .icons {
+    grid-template-columns: repeat(1, 1fr);
+}
 }
