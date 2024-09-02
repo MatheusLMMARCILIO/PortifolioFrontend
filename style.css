@@ -16,9 +16,9 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    /* Fica atrás do conteúdo */
+
     overflow: hidden;
-    /* Garante que a luz não cause barras de rolagem */
+
 }
 
 #light {
@@ -39,9 +39,10 @@ body {
 
 .allPage {
     position: relative;
-    /* Garante que o conteúdo fique sobre o fundo */
-    z-index: 2;
-    /* Garante que o conteúdo fique acima da luz e do fundo */
+ z-index: 2;
+ width: 100%;
+ height: auto;
+
 }
 
 /*******************************/
@@ -228,10 +229,11 @@ li {
 
 .aboutMe {
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 60px 0px;
 }
 
 .aboutMeSection {
@@ -243,7 +245,7 @@ li {
     max-width: 1050px;
     min-width: 50px;
     background-color: #eeeeee75;
-padding: 50px 0px;
+    padding: 50px 0px;
 }
 
 .aboutMeSection.dark {
@@ -391,7 +393,7 @@ padding: 50px 0px;
 }
 
 
-   
+
 
 /*****************prejects*************************/
 
@@ -411,7 +413,7 @@ padding: 50px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .myProjects span {
@@ -446,7 +448,9 @@ padding: 50px 0px;
     color: #0A67C2;
 }
 
-.IMAGE img, .IMAGEImg img, .IMAGECal img {
+.IMAGE img,
+.IMAGEImg img,
+.IMAGECal img {
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -454,7 +458,9 @@ padding: 50px 0px;
     margin-top: 20px;
 }
 
-.IMAGE.dark img, .IMAGEImg.dark img, .IMAGECal.dark img {
+.IMAGE.dark img,
+.IMAGEImg.dark img,
+.IMAGECal.dark img {
     box-shadow: #0A67C2 0px 22px 70px 4px;
 }
 
@@ -553,11 +559,6 @@ padding: 50px 0px;
         font-size: 12px;
     }
 
-    .aboutMeSection {
-        width: 850px;
-        height: 350px;
-    }
-
     .myPic img {
         width: 200px;
         margin-left: 30px;
@@ -570,7 +571,9 @@ padding: 50px 0px;
     .icons {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .projectsPart {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .html span,
     .css span,
@@ -607,7 +610,9 @@ padding: 50px 0px;
         flex-direction: column;
     }
 
-    .IMAGE img, .IMAGEImg img {
+    .IMAGE img,
+    .IMAGEImg img,
+    .IMAGECal img {
         width: 300px;
     }
 
@@ -618,6 +623,7 @@ padding: 50px 0px;
 
 
 }
+
 
 
 @media screen and (Max-width: 700px) {
@@ -655,12 +661,6 @@ padding: 50px 0px;
         font-size: 10px;
     }
 
-    .aboutMeSection {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-    }
 
     .myPic {
         display: none;
@@ -684,6 +684,11 @@ padding: 50px 0px;
     }
 
     .icons {
-    grid-template-columns: repeat(1, 1fr);
-}
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projectsPart {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
