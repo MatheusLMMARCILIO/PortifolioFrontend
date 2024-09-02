@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -16,39 +16,33 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-
     overflow: hidden;
-
 }
 
 #light {
     position: absolute;
     width: 100px;
-    /* Tamanho da luz menor */
     height: 100px;
-    /* Tamanho da luz menor */
     background: radial-gradient(circle, #054f99 0%, rgba(0, 0, 0, 0) 50%);
     pointer-events: none;
-    /* Faz com que o elemento não interfira com o clique do mouse */
     border-radius: 50%;
     transition: 0.1s;
-    /* Suaviza a movimentação da luz */
     z-index: 1;
-    /* Garante que a luz fique acima do fundo, mas atrás do conteúdo */
 }
 
 .allPage {
     position: relative;
- z-index: 2;
- width: 100%;
- height: auto;
-
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/*******************************/
-
 body.dark {
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s;
 }
 
@@ -58,48 +52,50 @@ body.dark {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .Idioma {
-    padding: 0px 20px 0px;
-
-}
-
-.Idioma img:hover {
-    box-shadow: #0A67C2 0px 54px 55px, #0A67C2 0px -12px 30px, #0A67C2 0px 4px 6px, #0A67C2 0px 12px 13px, #0A67C2 0px -3px 5px;
-
-}
-
-.Idioma.dark img {
-    box-shadow: #0A67C2 0px 54px 55px, #0A67C2 0px -12px 30px, #0A67C2 0px 4px 6px, #0A67C2 0px 12px 13px, #0A67C2 0px -3px 5px;
+    padding: 0 20px;
 }
 
 .Idioma img {
     width: 50px;
+    transition: box-shadow 0.3s;
+}
+
+.Idioma img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Idioma.dark img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .links ul,
-li {
+.links li {
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .links li {
     padding: 20px;
 }
 
-.links.dark a {
-    color: white;
-}
-
 .links a {
     font-size: 18px;
     color: black;
     text-decoration: none;
-    transition: 0.5s;
+    transition: color 0.3s;
 }
 
 .links a:hover {
     color: #0A67C2;
+}
+
+.links.dark a {
+    color: white;
 }
 
 .right {
@@ -111,12 +107,6 @@ li {
     margin-right: 20px;
 }
 
-.contact.dark button {
-    background-color: #0A67C2;
-    color: white;
-    box-shadow: #0A67C2 0px 54px 55px, #0A67C2 0px -12px 30px, #0A67C2 0px 4px 6px, #0A67C2 0px 12px 13px, #0A67C2 0px -3px 5px;
-}
-
 .contact button {
     width: 90px;
     height: 25px;
@@ -125,10 +115,16 @@ li {
     cursor: pointer;
     background-color: white;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contact button:hover {
-    box-shadow: #0A67C2 0px 54px 55px, #0A67C2 0px -12px 30px, #0A67C2 0px 4px 6px, #0A67C2 0px 12px 13px, #0A67C2 0px -3px 5px;
+    background-color: #0A67C2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact.dark button {
     background-color: #0A67C2;
     color: white;
 }
@@ -137,8 +133,7 @@ li {
     cursor: pointer;
 }
 
-/*****************menuPart2**************************/
-
+/* Menu Part 2 */
 .menuPart2 {
     width: 100%;
     height: 300px;
@@ -152,7 +147,7 @@ li {
     font-size: 80px;
     font-weight: bold;
     color: black;
-    transition: 0.5s;
+    transition: color 0.3s;
 }
 
 .devFront.dark span {
@@ -166,8 +161,8 @@ li {
 .description p {
     color: black;
     font-size: 20px;
-    transition: 0.5s;
     margin: 20px;
+    transition: color 0.3s;
 }
 
 .description p:hover {
@@ -178,11 +173,6 @@ li {
     color: white;
 }
 
-.description.dark p:hover {
-    color: #0A67C2;
-}
-
-
 .tags span {
     font-size: 16px;
     font-weight: bold;
@@ -190,25 +180,8 @@ li {
 }
 
 .tags.dark span {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: rgba(255, 255, 255, 1);
-    text-decoration: normal;
-    text-align: center;
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    white-space: pre;
-    text-shadow: 0 0 10px #0A67C2, 0 0 20px #0A67C2, 0 0 30px #0A67C2, 0 0 40px #0A67C2, 0 0 70px #0A67C2, 0 0 80px #0A67C2, 0 0 100px #0A67C2;
-    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-.bntCv {
-    margin: 20px;
+    color: white;
+    text-shadow: 0 0 10px #0A67C2, 0 0 20px #0A67C2;
 }
 
 .bntCv button {
@@ -217,23 +190,23 @@ li {
     border: none;
     border-radius: 20px;
     background-color: #0A67C2;
+    color: white;
+    font-weight: bold;
 }
 
 .bntCv a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
 }
 
-/***************AboutMe***************************************/
-
+/* About Me Section */
 .aboutMe {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 0px;
+    padding: 60px 0;
 }
 
 .aboutMeSection {
@@ -241,35 +214,30 @@ li {
     align-items: center;
     justify-content: center;
     width: 1050px;
-    height: auto;
-    max-width: 1050px;
-    min-width: 50px;
-    background-color: #eeeeee75;
-    padding: 50px 0px;
+    background-color: #eeeeee;
+    padding: 50px 0;
+    border-radius: 8px;
 }
 
 .aboutMeSection.dark {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: #0A67C2 0px 22px 70px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .textInformation {
     max-width: 600px;
-    min-width: 50px;
 }
 
 .informationAboutMe {
-    margin: 0px 40px 0px;
+    margin: 0 40px;
 }
-
 
 .whoim span {
     font-size: 20px;
     color: #0A67C2;
     font-weight: bold;
 }
-
 
 .moreInformation span {
     font-size: 25px;
@@ -286,11 +254,8 @@ li {
     color: #949494;
 }
 
-.moreInformation.dark span {
-    color: white;
-}
-
-.textInformation {
+.textInformation span {
+    color: black;
     margin-top: 20px;
 }
 
@@ -302,8 +267,7 @@ li {
     width: 300px;
 }
 
-/***********************Skill************************/
-
+/* Skill Section */
 .MySkill {
     width: 100%;
     height: auto;
@@ -311,7 +275,7 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 0px;
+    padding: 100px 0;
 }
 
 .spanSkill {
@@ -325,18 +289,19 @@ li {
 .spanSkill span {
     font-size: 80px;
     font-weight: bold;
+    color: black;
 }
 
 .spanSkill span:hover {
     color: #0A67C2;
 }
 
-.spanSkill.dark {
+.spanSkill.dark span {
     color: white;
 }
 
 .informationText {
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .informationText span {
@@ -355,26 +320,21 @@ li {
 
 .informationText p {
     width: 300px;
-    margin-top: 10px 0px;
+    margin-top: 10px;
 }
 
 .icons {
     width: 80%;
-    height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0px 0px;
+    gap: 50px;
+    padding: 50px 0;
 }
-
 
 .html,
 .css,
 .JS,
 .React {
-
     margin: 20px;
 }
 
@@ -392,11 +352,7 @@ li {
     color: white;
 }
 
-
-
-
-/*****************prejects*************************/
-
+/* Projects Section */
 .prejects {
     width: 100%;
     height: auto;
@@ -404,16 +360,14 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .myProjects {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .myProjects span {
@@ -429,13 +383,11 @@ li {
     color: white;
 }
 
-
 .instagram,
 .GerenciadorDeSenha,
 .Calculadora {
     width: 100%;
     max-width: 400px;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -468,10 +420,7 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .iconss {
@@ -487,12 +436,9 @@ li {
     margin: 5px;
 }
 
-/********conato*****************/
-
-/* Seção de Contato */
+/* Contact Section */
 .contactSection {
     padding: 50px 0;
-
     text-align: center;
 }
 
@@ -502,6 +448,10 @@ li {
     font-weight: bold;
     margin-bottom: 30px;
     display: inline-block;
+}
+
+.contactTitle.dark span {
+    color: white;
 }
 
 .contactIcons {
@@ -519,7 +469,7 @@ li {
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contactItem a {
@@ -538,15 +488,13 @@ li {
     font-weight: bold;
 }
 
-.contactTitle.dark span {
+.contactItem:hover {
+    background-color: #0A67C2;
     color: white;
 }
 
-
-
-/**************Resposividade*****************/
-
-@media screen and (Max-width: 1000px) {
+/* Responsividade */
+@media screen and (max-width: 1000px) {
     .devFront span {
         font-size: 50px;
     }
@@ -565,12 +513,13 @@ li {
     }
 
     .textInformation span {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .icons {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .projectsPart {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -593,16 +542,12 @@ li {
         font-size: 50px;
     }
 
-    .myProjects {
-        margin-top: 50px;
-    }
-
     .myProjects span {
         font-size: 50px;
     }
 
     .MySkill {
-        height: 820px;
+        height: auto;
     }
 
     .blocoUm {
@@ -620,22 +565,16 @@ li {
     .GerenciadorDeSenha {
         margin: 0;
     }
-
-
 }
 
-
-
-@media screen and (Max-width: 700px) {
-
+@media screen and (max-width: 700px) {
     .Menu {
-        margin: 30px 0px 0px;
-        display: flex;
+        margin: 30px 0 0;
         flex-direction: column;
     }
 
     .contact {
-        margin-right: 20px;
+        margin-right: 0;
     }
 
     .links a {
@@ -644,8 +583,6 @@ li {
 
     .right {
         width: 100%;
-        display: flex;
-        align-items: center;
         justify-content: center;
     }
 
@@ -660,7 +597,6 @@ li {
     .tags span {
         font-size: 10px;
     }
-
 
     .myPic {
         display: none;
@@ -684,11 +620,10 @@ li {
     }
 
     .icons {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .projectsPart {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
-
 }
