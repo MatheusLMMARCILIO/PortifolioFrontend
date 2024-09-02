@@ -177,6 +177,7 @@ body.dark {
     font-size: 16px;
     font-weight: bold;
     color: #0A67C2;
+
 }
 
 .tags.dark span {
@@ -192,6 +193,7 @@ body.dark {
     background-color: #0A67C2;
     color: white;
     font-weight: bold;
+    margin: 20px;
 }
 
 .bntCv a {
@@ -214,15 +216,14 @@ body.dark {
     align-items: center;
     justify-content: center;
     width: 1050px;
-    background-color: #eeeeee;
+    background-color: #eeeeee5d;
     padding: 50px 0;
     border-radius: 8px;
 }
 
 .aboutMeSection.dark {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: #0A67C2 0px 22px 70px 4px;
 }
 
 .textInformation {
@@ -252,6 +253,7 @@ body.dark {
 .moreInformation p {
     font-size: 14px;
     color: #949494;
+    margin-bottom: 8px;
 }
 
 .textInformation span {
@@ -386,13 +388,14 @@ body.dark {
 .instagram,
 .GerenciadorDeSenha,
 .Calculadora {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 
 .name span {
     font-size: 20px;
@@ -403,11 +406,18 @@ body.dark {
 .IMAGE img,
 .IMAGEImg img,
 .IMAGECal img {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    max-width: 500px;
     height: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-top: 20px;
+    transition: .5s;
+}
+
+.IMAGE img:hover,
+.IMAGEImg img:hover,
+.IMAGECal img:hover {
+    width: 500px;
 }
 
 .IMAGE.dark img,
@@ -461,7 +471,7 @@ body.dark {
     gap: 20px;
 }
 
-.contactItem {
+.contactItem, .contactItem2, .contactItem3, .contactItem4 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,26 +482,26 @@ body.dark {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.contactItem a {
+.contactItem.dark, .contactItem2.dark, .contactItem3.dark , .contactItem4.dark {
+        background: rgba(255, 255, 255, 0.1);
+}
+
+.contactItem a, .contactItem2 a, .contactItem3 a, .contactItem4 a {
     text-decoration: none;
     color: black;
 }
 
-.contactItem i {
+.contactItem i, .contactItem2 i, .contactItem3 i, .contactItem4 i {
     font-size: 24px;
     margin-bottom: 10px;
     color: #0A67C2;
 }
 
-.contactItem span {
+.contactItem span, .contactItem2 span, .contactItem3 span, .contactItem4 span {
     font-size: 16px;
     font-weight: bold;
 }
 
-.contactItem:hover {
-    background-color: #0A67C2;
-    color: white;
-}
 
 /* Responsividade */
 @media screen and (max-width: 1000px) {

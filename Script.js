@@ -20,6 +20,10 @@ ModoDark.addEventListener("click", () => {
     const img = document.querySelector(".IMAGE")
     const contactTitle = document.querySelector(".contactTitle")
     const contactItem = document.querySelector('.contactItem')
+    const contactItem2 = document.querySelector('.contactItem2')
+    const contactItem3 = document.querySelector('.contactItem3')
+    const contactItem4 = document.querySelector('.contactItem4')
+
 const IMAGEImg = document.querySelector('.IMAGEImg')
 const IMAGECal = document.querySelector('.IMAGECal')
 
@@ -42,6 +46,9 @@ const IMAGECal = document.querySelector('.IMAGECal')
     img.classList.toggle("dark")
     contactTitle.classList.toggle('dark')
     contactItem.classList.toggle('dark')
+    contactItem2.classList.toggle('dark')
+    contactItem3.classList.toggle('dark')
+    contactItem4.classList.toggle('dark')
     IMAGEImg.classList.toggle('dark')
     IMAGECal.classList.toggle('dark')
 
